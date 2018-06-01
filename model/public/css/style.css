@@ -1,0 +1,119 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body main{
+	margin: 0 auto;
+	padding-top: 20px;
+	width : 700px;
+	font-family: 'Open Sans', sans-serif;
+}
+#name{
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-bottom: 15px;
+}
+header{
+	background-color: #605CE4;
+	width: 100%;
+	box-shadow: 4px 4px 5px grey;
+}
+nav a{
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+h1{
+	font-family: 'Zilla Slab', serif;
+	color: white;
+	display: inline-block;
+}
+table {
+	width : 700px;
+}
+
+table, td, th {
+	border : 1px #ddd solid;
+	border-collapse : collapse;
+	background-color: #ccc;
+	color : black;
+}
+
+td, th {
+	padding : 2px;
+}
+
+th {
+	text-align : left;
+}
+
+td.center{
+	text-align : center;
+}
+
+a {
+	color : black;
+}
+p.options{
+	text-align : right;
+}
+
+label {
+	display : inline-block;
+	width : 100px;
+}
+form div {
+	margin: 5px 0;
+}
+#logo{
+	max-width: 10%;
+	display: inline;
+}
+#button1{
+	margin-left: 15px;
+}
+
+/* buttons */
+.button {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.button:focus, .button:hover {
+  text-decoration: none;
+}
+
+.button:focus, .button.focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+.button-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.button-primary:hover {
+  color: #EAEAEA;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.button-primary:focus, .button-primary.focus {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/*imports*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Zilla+Slab');
