@@ -3,7 +3,7 @@
 	<body>
 		<header>
 			<nav>
-				<a class="button button-primary" href="http://localhost/hospital/">home</a>
+				<a id="button1" class="button button-primary" href="<?= URL . "home"?>">Home</a>
 			</nav>
 		</header>
 		<main>
@@ -17,8 +17,8 @@
 					</th>
 				</tr>
 				<?php
-				foreach ($Data as $patient) {
-					echo "<tr><td>".$patient['species_id']."</td><td>".$patient['species_description']."</td><td><a class='button button-primary' href='http://localhost/hospital/home/edit_species/".$patient[species_id]."'>edit</a></td></tr>";
+				foreach ($Data as $species) {
+					echo "<tr><td>".$species['species_id']."</td><td>".$species['species_description']."</td><td><a class='button button-primary' href='/hospital/species/edit_species/".$species[species_id]."'>edit</a></td></tr>";
 				}?>
 			</table>
 		</main>

@@ -1,27 +1,41 @@
-<? 
+<?php 
 
 require(ROOT . "model/SpeciesModel.php");
 
-function species()
+function index()
 {
     render("home/species", array(
         "Data" => getSpecies()
     ));
 
 }
-function edit_species($ID)
+function edit_species($id)
 {
     render("home/editspecies", array(
-        "Data" => editSpecies($ID),
+        "Data" => editSpecies($id),
         "id" => $id
     ));
     if(isset($_POST['Update'])) {
         $name = $_POST['name'];
     }
 }
-function editConfirmSpecies($ID){
-     if(isset($_POST['Update'])) {
+function editConfirmSpecies($id){
+    if(isset($_POST['Update'])) {
         $name = $_POST['name'];
-        updateSpecies($ID, $name);
+        updateSpecies($id, $name);
+         render("home/species", array(
+        "Data" => getSpecies()
+    ));
     }
+}
+
+function insert_species($id){
+    render("home/insertspecies", array(
+        "Data" => insertSpecies($id), 
+        "id" => $id
+    ));
+    if(isset($_POST['Insert'])) {
+        $name = $_POST['name'];
+    }
+
 }

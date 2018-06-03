@@ -10,10 +10,10 @@ function getSpecies()
     return $query->fetchAll();
 }
 
-function editSpecies($id) 
+function editSpecies($ID) 
 {
     $db = openDatabaseConnection();
-    $sql = "SELECT * FROM species WHERE species_id = '$id'";
+    $sql = "SELECT * FROM species WHERE species_id = '$ID'";
     $query = $db->prepare($sql);
     $query->execute();
     $db = null;
@@ -27,4 +27,13 @@ function updateSpecies($ID, $name){
     $query->execute();
     $db = null;
     return true;
+}
+
+function insertSpecies($ID, $name){
+    $db = openDatabaseConnection();
+    $sql = "INSERT species SET species_description='$name' WHERE species_id='$ID'";
+    $query = $db->prepare($sql);
+    $query->execute();
+    $db = null;
+    return true;  
 }

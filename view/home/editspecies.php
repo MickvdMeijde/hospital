@@ -1,16 +1,9 @@
-<?php
-
-    if(isset($_POST['Update'])) {
-        editConfirmSpecies($id);
-        header('location: ' . URL . 'home/species');
-    }
-?>
-<form method="POST" action="<?= URL . "home/">
-    <div class="create">
+<form method="POST" action="<?= URL . "species/editConfirmSpecies/".$Data["species_id"] ?>">
+_    <div class="create">
         <h1 style="color: black;"><b>Update</b></h1>
         <label class="createLabel"><b>Species</b></label>
         <input type="text" placeholder="Dog" name="name" value="<?php echo $Data['species_description']; ?>" autocomplete="off" required>
         <br>
-        <button class="button button-primary createButton" type="submit" name="Update">Update</button><a class="button button-primary" href="http://localhost/hospital/home/species/">Cancel</a>
+        <button class="button button-primary createButton" type="submit" name="Update"><a class="button button-primary" href="<?= URL . "species"?>">update</a></button><a class="button button-primary" href="<?= URL . "species"?>">Cancel</a>
     </div>
 </form>

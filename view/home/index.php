@@ -3,10 +3,10 @@
 	<body>
 		<header>
 			<nav>
-				<a id="button1" class="button button-primary" href="index">Home</a>
-				<a class="button button-primary" href="../patients/index">Patients</a>
-				<a class="button button-primary" href="../clients/index">Clients</a>
-				<a class="button button-primary" href="../species/index">Species</a>
+				<a id="button1" class="button button-primary" href="./home">Home</a>
+				<a class="button button-primary" href="<?=URL."patients"?>">Patients</a>
+				<a class="button button-primary" href="<?=URL."client"?>">Clients</a>
+				<a class="button button-primary" href="<?=URL."species"?>">Species</a>
 			</nav>
 		</header>
 		<main>

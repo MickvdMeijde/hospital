@@ -10,7 +10,8 @@ CREATE TABLE IF NOT EXISTS `species` (
 
 INSERT INTO `species` (`species_id`, `species_description`) VALUES
 (1, 'Hond'),
-(2, 'Kat');
+(2, 'Kat'),
+(3, 'Vogel');
 
 DROP TABLE IF EXISTS `clients`;
 CREATE TABLE IF NOT EXISTS `clients` (
@@ -20,9 +21,8 @@ CREATE TABLE IF NOT EXISTS `clients` (
 	PRIMARY KEY (`client_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
-INSERT INTO `clients` (`client_id`, `client_firstname`, `client_lastname`) VALUES
-(1, 'Jane', 'Doe'),
-(2, 'John', 'Doe');
+INSERT INTO clients (`client_id`, `client_firstname`, `client_lastname`) 
+VALUES (1, 'Jane', 'Doe'), (2, 'John', 'Doe');
 
 DROP TABLE IF EXISTS `patients`;
 CREATE TABLE IF NOT EXISTS `patients` (

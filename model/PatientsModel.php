@@ -10,7 +10,7 @@ function getPatients()
     return $query->fetchAll(); 
 }
 
-function editPatients($id) 
+function editPatients($ID) 
 {
     $db = openDatabaseConnection();
     $sql = "SELECT * FROM patients WHERE ID = '$id'";
